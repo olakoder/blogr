@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>JAG</h1>
+
+        <div class="links hide">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <img class="menu" src="./images/icon-hamburger.svg" alt="">
+        <img class="wire hide" src="./images/icon-close.svg" alt="">
+    </div>
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .links {
+            position: fixed;
+            background-color: black;
+            color: white;
+            right: 0;
+            top: 6em;
+        }
+
+        p {
+            text-transform: uppercase;
+        }
+    </style>
+
+    <script>
+        document.querySelector(".menu").addEventListener("click", function() {
+            document.querySelector(".menu").classList.add("hide")
+            document.querySelector(".wire").classList.remove("hide")
+            document.querySelector(".links").classList.remove("hide")
+        })
+        document.querySelector(".wire").addEventListener("click", collapse)
+
+
+        // function show() {
+        //     document.querySelector(".menu").classList.add("hide")
+        //     document.querySelector(".wire").classList.remove("hide")
+        //     document.querySelector(".links").classList.remove("hide")
+        // }
+
+        function collapse() {
+            document.querySelector(".menu").classList.remove("hide")
+            document.querySelector(".wire").classList.add("hide")
+            document.querySelector(".links").classList.add("hide")
+        }
+    </script>
+</body>
+</html>
